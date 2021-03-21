@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="TLGoal" representedClassName="TLGoal" syncable="YES">
+        <attribute name="addedOn" attributeType="Date" defaultDateTimeInterval="637606320" usesScalarValueType="NO"/>
+        <attribute name="icon" attributeType="String" defaultValueString=""/>
+        <attribute name="id" attributeType="UUID" defaultValueString="5B8299BA-2470-4401-9593-8B82A4F6AFE4" usesScalarValueType="NO"/>
+        <attribute name="isRemoved" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="modifiedOn" attributeType="Date" defaultDateTimeInterval="637606380" usesScalarValueType="NO"/>
+        <attribute name="position" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <relationship name="records" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TLGoalRecord" inverseName="goal" inverseEntity="TLGoalRecord"/>
+    </entity>
+    <entity name="TLGoalRecord" representedClassName="TLGoalRecord" syncable="YES">
+        <attribute name="date" attributeType="Date" defaultDateTimeInterval="637606740" usesScalarValueType="NO"/>
+        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TLGoal" inverseName="records" inverseEntity="TLGoal"/>
+    </entity>
+    <elements>
+        <element name="TLGoal" positionX="-63" positionY="-9" width="128" height="149"/>
+        <element name="TLGoalRecord" positionX="-54" positionY="45" width="128" height="59"/>
+    </elements>
+</model>
