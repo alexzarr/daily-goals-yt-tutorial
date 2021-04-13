@@ -10,6 +10,8 @@ import CoreData
 
 struct MyGoalsView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    
+    @StateObject var viewModel = MyGoalsViewModel()
 
     @FetchRequest(fetchRequest: TLGoal.fetchRequest())
     private var goals: FetchedResults<TLGoal>
@@ -27,7 +29,11 @@ struct MyGoalsView: View {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 10.0) {
                             ForEach(goals) { goal in
-                                MyGoalsItemView(goal: goal)
+                                Button {
+                                    viewModel.markAsDone(goal)
+                                } label: {
+                                    MyGoalsItemView(goal: goal)
+                                }
                             }
                         }
                         .padding(10)
@@ -57,8 +63,12 @@ struct MyGoalsView: View {
 }
 
 struct MyGoalsView_Previews: PreviewProvider {
+    static var dataManager: DataManagerProtocol {
+        DataManager(persistenceController: .preview)
+    }
+    
     static var previews: some View {
-        MyGoalsView()
+        MyGoalsView(viewModel: MyGoalsViewModel(dataManager: dataManager))
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
