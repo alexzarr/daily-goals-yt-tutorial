@@ -31,3 +31,14 @@ extension TLGoal {
 
 // MARK: - Identifiable
 extension TLGoal: Identifiable { }
+
+extension TLGoal {
+    var lastRecord: TLGoalRecord? {
+        records?.sorted { $0.date > $1.date }.first
+    }
+    
+    var isCompletedToday: Bool {
+        guard let lastRecord = lastRecord else { return false }
+        return Calendar.current.isDateInToday(lastRecord.date)
+    }
+}

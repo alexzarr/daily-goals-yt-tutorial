@@ -24,7 +24,7 @@ struct MyGoalsItemView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .aspectRatio(1.0, contentMode: .fill)
         .padding(4)
-        .background(Color.tlBackground)
+        .background(goal.isCompletedToday ? Color.tlCompleted : Color.tlBackground)
         .cornerRadius(8.0)
         .shadow(color: .gray, radius: 3.0, x: 0.0, y: 0.0)
     }
@@ -42,8 +42,27 @@ struct MyGoalsItemView_Previews: PreviewProvider {
         goal.isRemoved = false
         return goal
     }
+    
+    static var completedGoal: TLGoal {
+        let context = PersistenceController.preview.container.viewContext
+        let record = TLGoalRecord(context: context)
+        record.date = Date()
+        let goal = TLGoal(context: context)
+        goal.id = UUID()
+        goal.icon = "🏃"
+        goal.title = "Jogging"
+        goal.position = 0
+        goal.addedOn = Date()
+        goal.modifiedOn = Date()
+        goal.isRemoved = false
+        goal.records = [record]
+        return goal
+    }
     static var previews: some View {
-        MyGoalsItemView(goal: goal)
-            .previewLayout(.fixed(width: 160, height: 160))
+        Group {
+            MyGoalsItemView(goal: goal)
+            MyGoalsItemView(goal: completedGoal)
+        }
+        .previewLayout(.fixed(width: 160, height: 160))
     }
 }

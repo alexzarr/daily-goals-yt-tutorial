@@ -37,6 +37,12 @@
 		A096C515260D0A0B0081CC21 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A096C513260D0A0B0081CC21 /* Colors.xcassets */; };
 		A096C519260D0A340081CC21 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096C518260D0A340081CC21 /* Color+CustomColors.swift */; };
 		A096C51A260D0A340081CC21 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096C518260D0A340081CC21 /* Color+CustomColors.swift */; };
+		A0ECE26226263B8500BD7A48 /* DataManager+Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26126263B8500BD7A48 /* DataManager+Goal.swift */; };
+		A0ECE26326263B8500BD7A48 /* DataManager+Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26126263B8500BD7A48 /* DataManager+Goal.swift */; };
+		A0ECE26726263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26626263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift */; };
+		A0ECE26826263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26626263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift */; };
+		A0ECE26C26263F3400BD7A48 /* MyGoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26B26263F3400BD7A48 /* MyGoalsViewModel.swift */; };
+		A0ECE26D26263F3400BD7A48 /* MyGoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26B26263F3400BD7A48 /* MyGoalsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,9 @@
 		A096C50C260D08FE0081CC21 /* MyGoalsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalsItemView.swift; sourceTree = "<group>"; };
 		A096C513260D0A0B0081CC21 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A096C518260D0A340081CC21 /* Color+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+CustomColors.swift"; sourceTree = "<group>"; };
+		A0ECE26126263B8500BD7A48 /* DataManager+Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Goal.swift"; sourceTree = "<group>"; };
+		A0ECE26626263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRecordDataManagerProtocol.swift; sourceTree = "<group>"; };
+		A0ECE26B26263F3400BD7A48 /* MyGoalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				A0365FC226011879002CE230 /* MyGoalsView.swift */,
+				A0ECE26B26263F3400BD7A48 /* MyGoalsViewModel.swift */,
 				A096C50C260D08FE0081CC21 /* MyGoalsItemView.swift */,
 			);
 			path = "My Goals";
@@ -155,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				A081CB32260D118800B40089 /* DataManager.swift */,
+				A0ECE26126263B8500BD7A48 /* DataManager+Goal.swift */,
+				A0ECE26626263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -287,11 +299,14 @@
 			files = (
 				A081CB2D260D0F9600B40089 /* AddNewGoalView.swift in Sources */,
 				A0365FD72601187C002CE230 /* daily_goalsApp.swift in Sources */,
+				A0ECE26226263B8500BD7A48 /* DataManager+Goal.swift in Sources */,
 				A024ED862603BC5700215C58 /* TLGoalRecord.swift in Sources */,
 				A0365FDB2601187C002CE230 /* Persistence.swift in Sources */,
 				A0365FEA26011C5B002CE230 /* TLGoal.swift in Sources */,
 				A024ED8B2603BD1100215C58 /* Persistence+Preview.swift in Sources */,
 				A096C519260D0A340081CC21 /* Color+CustomColors.swift in Sources */,
+				A0ECE26726263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift in Sources */,
+				A0ECE26C26263F3400BD7A48 /* MyGoalsViewModel.swift in Sources */,
 				A081CB1E260D0EF400B40089 /* AddNewGoalViewModel.swift in Sources */,
 				A0365FD52601187C002CE230 /* daily_goals.xcdatamodeld in Sources */,
 				A081CB23260D0F2D00B40089 /* GoalIcon.swift in Sources */,
@@ -307,11 +322,14 @@
 			files = (
 				A081CB2E260D0F9600B40089 /* AddNewGoalView.swift in Sources */,
 				A0365FD82601187C002CE230 /* daily_goalsApp.swift in Sources */,
+				A0ECE26326263B8500BD7A48 /* DataManager+Goal.swift in Sources */,
 				A024ED872603BC5700215C58 /* TLGoalRecord.swift in Sources */,
 				A0365FDC2601187C002CE230 /* Persistence.swift in Sources */,
 				A0365FEB26011C5B002CE230 /* TLGoal.swift in Sources */,
 				A024ED8C2603BD1100215C58 /* Persistence+Preview.swift in Sources */,
 				A096C51A260D0A340081CC21 /* Color+CustomColors.swift in Sources */,
+				A0ECE26826263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift in Sources */,
+				A0ECE26D26263F3400BD7A48 /* MyGoalsViewModel.swift in Sources */,
 				A081CB1F260D0EF400B40089 /* AddNewGoalViewModel.swift in Sources */,
 				A0365FD62601187C002CE230 /* daily_goals.xcdatamodeld in Sources */,
 				A081CB24260D0F2D00B40089 /* GoalIcon.swift in Sources */,
