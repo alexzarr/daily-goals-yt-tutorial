@@ -61,9 +61,11 @@ extension DataManager: GoalRecordDataManagerProtocol {
     
     func deleteGoalRecord(for goalID: UUID, date: Date) {
         context.performAndWait {
-            guard let goalRecord = readGoalRecord(for: goalID, date: date) else { return }
-            do {
+            while let goalRecord = readGoalRecord(for: goalID, date: date) {
                 context.delete(goalRecord)
+            }
+            guard context.hasChanges else { return }
+            do {
                 try context.save()
             } catch {
                 fatalError("error: \(error)")
