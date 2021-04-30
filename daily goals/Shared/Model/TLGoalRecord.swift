@@ -16,7 +16,7 @@ final class TLGoalRecord: NSManagedObject {
 
 extension TLGoalRecord {
     class func fetchRequest() -> NSFetchRequest<TLGoalRecord> {
-        let request = NSFetchRequest<TLGoalRecord>(entityName: "TLGoal")
+        let request = NSFetchRequest<TLGoalRecord>(entityName: "TLGoalRecord")
         request.sortDescriptors = [NSSortDescriptor(keyPath: \TLGoalRecord.date, ascending: false)]
         return request
     }

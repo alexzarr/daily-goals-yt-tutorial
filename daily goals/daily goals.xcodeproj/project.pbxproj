@@ -39,8 +39,8 @@
 		A096C51A260D0A340081CC21 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096C518260D0A340081CC21 /* Color+CustomColors.swift */; };
 		A0ECE26226263B8500BD7A48 /* DataManager+Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26126263B8500BD7A48 /* DataManager+Goal.swift */; };
 		A0ECE26326263B8500BD7A48 /* DataManager+Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26126263B8500BD7A48 /* DataManager+Goal.swift */; };
-		A0ECE26726263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26626263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift */; };
-		A0ECE26826263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26626263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift */; };
+		A0ECE26726263BC400BD7A48 /* DataManager+GoalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26626263BC400BD7A48 /* DataManager+GoalRecord.swift */; };
+		A0ECE26826263BC400BD7A48 /* DataManager+GoalRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26626263BC400BD7A48 /* DataManager+GoalRecord.swift */; };
 		A0ECE26C26263F3400BD7A48 /* MyGoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26B26263F3400BD7A48 /* MyGoalsViewModel.swift */; };
 		A0ECE26D26263F3400BD7A48 /* MyGoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ECE26B26263F3400BD7A48 /* MyGoalsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +67,7 @@
 		A096C513260D0A0B0081CC21 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A096C518260D0A340081CC21 /* Color+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+CustomColors.swift"; sourceTree = "<group>"; };
 		A0ECE26126263B8500BD7A48 /* DataManager+Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Goal.swift"; sourceTree = "<group>"; };
-		A0ECE26626263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRecordDataManagerProtocol.swift; sourceTree = "<group>"; };
+		A0ECE26626263BC400BD7A48 /* DataManager+GoalRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+GoalRecord.swift"; sourceTree = "<group>"; };
 		A0ECE26B26263F3400BD7A48 /* MyGoalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,7 +166,7 @@
 			children = (
 				A081CB32260D118800B40089 /* DataManager.swift */,
 				A0ECE26126263B8500BD7A48 /* DataManager+Goal.swift */,
-				A0ECE26626263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift */,
+				A0ECE26626263BC400BD7A48 /* DataManager+GoalRecord.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					A0365FC82601187C002CE230 = {
 						CreatedOnToolsVersion = 12.4;
@@ -305,7 +305,7 @@
 				A0365FEA26011C5B002CE230 /* TLGoal.swift in Sources */,
 				A024ED8B2603BD1100215C58 /* Persistence+Preview.swift in Sources */,
 				A096C519260D0A340081CC21 /* Color+CustomColors.swift in Sources */,
-				A0ECE26726263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift in Sources */,
+				A0ECE26726263BC400BD7A48 /* DataManager+GoalRecord.swift in Sources */,
 				A0ECE26C26263F3400BD7A48 /* MyGoalsViewModel.swift in Sources */,
 				A081CB1E260D0EF400B40089 /* AddNewGoalViewModel.swift in Sources */,
 				A0365FD52601187C002CE230 /* daily_goals.xcdatamodeld in Sources */,
@@ -328,7 +328,7 @@
 				A0365FEB26011C5B002CE230 /* TLGoal.swift in Sources */,
 				A024ED8C2603BD1100215C58 /* Persistence+Preview.swift in Sources */,
 				A096C51A260D0A340081CC21 /* Color+CustomColors.swift in Sources */,
-				A0ECE26826263BC400BD7A48 /* GoalRecordDataManagerProtocol.swift in Sources */,
+				A0ECE26826263BC400BD7A48 /* DataManager+GoalRecord.swift in Sources */,
 				A0ECE26D26263F3400BD7A48 /* MyGoalsViewModel.swift in Sources */,
 				A081CB1F260D0EF400B40089 /* AddNewGoalViewModel.swift in Sources */,
 				A0365FD62601187C002CE230 /* daily_goals.xcdatamodeld in Sources */,
@@ -504,6 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ACYLNQAW47;
@@ -528,6 +529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ACYLNQAW47;

@@ -15,6 +15,7 @@ final class MyGoalsViewModel: ObservableObject {
     }
     
     func markAsDone(_ goal: TLGoal) {
+        guard !goal.isCompletedToday else { return }
         dataManager.createGoalRecord(for: goal.id, date: Date())
     }
     
